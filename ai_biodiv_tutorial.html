@@ -14611,6 +14611,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Getting-started">Getting started<a class="anchor-link" href="#Getting-started">&#182;</a></h2><p>There is an easy and a more complicated way to get set up for this tutorial. I recommend you go with the easy option, which is using Google colab. Google colab is an online jupyter notebook which allows you to run python commands in a pre-installed environment. The other advantage of working in a notebook is that you can write comments alongside your code (see more info below).</p>
 <p>However, if you want to set up python and tensorflow on your own computer, you can follow the installation instructions below to do so.</p>
+<hr />
 <h3 id="Option-A)-Use-Google-colab">Option A) Use Google colab<a class="anchor-link" href="#Option-A)-Use-Google-colab">&#182;</a></h3><p>In case you don't already have a google account, you will need to create one first here: <a href="https://www.google.com/account/about/">google.com/account/about/</a></p>
 <p>Open the Google colab webpage (<a href="https://colab.google">https://colab.google</a>) and click on <strong>New Notebook</strong></p>
 <p>That's it (I told you it was easy)! For the tutorial you will need to load some data files to google colab, which you can do by clicking on the folder symbol in the menu to the left and then drag-and-drop your file in the online file explorer. Alternatively you can click on the file-upload symbol in the sub-menu.</p>
@@ -14619,26 +14620,38 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </pre></div>
 <p>It is a good idea to spend a moment to familiarize yourself with how to use a notebook. For that you can have a look at the following tutorial or alternatively just play around and try to figure it out yourself (or ask us for help).
 <strong>Tutorial:</strong> <a href="https://www.tutorialspoint.com/google_colab/your_first_colab_notebook.htm">https://www.tutorialspoint.com/google_colab/your_first_colab_notebook.htm</a></p>
+<hr />
 <h3 id="Option-B)-Local-installation">Option B) Local installation<a class="anchor-link" href="#Option-B)-Local-installation">&#182;</a></h3><p>In this tutorial we will be using the tensorflow Python library, which contains many handy machine learning functions. If you want to install python with tensorflow on your local computer, I recommend to set up a conda environment for this tutorial, where we will install all of the required python packages. If you already have a working tensorflow installation in python you can skip these steps and move on with the tutorial. Otherwise, follow these steps to get set up:</p>
 <ol>
-<li><p>Install miniconda. This is an installation manager that allows you easy installation of different programs. First check if there is already an existinc installation of conda or Anaconda on your computer. If not, I recommend you install the latest Python version of miniconda which you can find under <a href="https://docs.conda.io/en/latest/miniconda.html">this link</a>. All of the following commands have to be run in your bash command line (use the Anaconda terminal in case you are working on a windows computer).</p>
+<li><p><strong>Install miniconda:</strong> This is an installation manager that allows you easy installation of different programs. First check if there is already an existinc installation of conda or Anaconda on your computer. If not, I recommend you install the latest Python version of miniconda which you can find under <a href="https://docs.conda.io/en/latest/miniconda.html">this link</a>. All of the following commands have to be run in your bash command line prompt (ask your instructors or peers in case you don't know what that is). Mac and Linux users can just use the native Terminal app, but Windows users need to make sure to use the conda command prompt that should install together with miniconda. If you as a Windows user can't find the conda command prompt or it didn't install for some reason, you can download anaconda instead (<a href="https://www.anaconda.com/products/individual">https://www.anaconda.com/products/individual</a>).</p>
 </li>
-<li><p>Create a new conda environment and give it a custom name, e.g. <code>ai_course</code>. You can so that by running the following command:</p>
+<li><p><strong>Create a new conda environment</strong> and give it a custom name, e.g. <code>ai_course</code>. You can so that by running the following command:</p>
 <div class="highlight"><pre><span></span>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>ai_course<span class="w"> </span>-y
 </pre></div>
 </li>
-<li><p>Connect to the environment by executing:</p>
+<li><p><strong>Connect to the environment</strong> by executing:</p>
 <div class="highlight"><pre><span></span>conda<span class="w"> </span>activate<span class="w"> </span>ai_course
 </pre></div>
 </li>
-<li><p>Install the necessary python packages by running the following commands:</p>
+<li><p><strong>Install the necessary python packages</strong> by running the following commands:</p>
 <div class="highlight"><pre><span></span>conda<span class="w"> </span>install<span class="w"> </span>tensorflow<span class="w"> </span>jupyter<span class="w"> </span>-y
 pip<span class="w"> </span>install<span class="w"> </span>numpy<span class="w"> </span>pandas<span class="w"> </span>matplotlib<span class="w"> </span>ipykernel<span class="w"> </span>umap-learn<span class="w"> </span>scikit-learn<span class="w"> </span>seaborn
 </pre></div>
 </li>
-<li><p>Now you're all set to run the tutorial. Make sure you are connected to your environment when running python. You can start python by simply running <code>python</code> in your command line. However, it is much nicer and easier to run python in a python editor, such as Pycharm or Visual Studio Code. You can ask the instructors or your local IT support to set up those editors for you. Alternatively you can also work in a jupyter notebook, which you can connect to the environment you just created, by selecting the python kernel that is within your environment.</p>
+<li><p>Now you're all set to run the tutorial. <strong>Make sure you are connected to your environment</strong> when running python. You can <strong>start python</strong> by simply running <code>python</code> in your command line. However, it is much nicer and easier to run python in a python editor, such as Pycharm or Visual Studio Code. You can ask the instructors or your local IT support to set up those editors for you. Alternatively you can also work in a jupyter notebook, which you can connect to the environment you just created, by selecting the python kernel that is within your environment. Below are a few tips how to install a python editor setup on your local computer:</p>
 </li>
 </ol>
+<p><em>Python studio editor:</em></p>
+<ul>
+<li><code>conda install spyder</code> will install it, after that open by typing <code>spyder</code></li>
+<li>alternatively you can download <strong>PyCharm</strong> (<a href="https://www.jetbrains.com/pycharm/">https://www.jetbrains.com/pycharm/</a>)</li>
+</ul>
+<p><em>Jupyter notebook:</em></p>
+<ul>
+<li><code>conda install jupyter</code> will install it, open by typing <code>jupyter notebook</code></li>
+<li>alternatively you can download Visual Studio Code (<a href="https://code.visualstudio.com">https://code.visualstudio.com</a>) and install the jupyter plugin (<a href="https://code.visualstudio.com/docs/datascience/jupyter-notebooks">https://code.visualstudio.com/docs/datascience/jupyter-notebooks</a>)</li>
+</ul>
+<hr />
 
 </div>
 </div>
